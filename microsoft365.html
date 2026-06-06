@@ -12,11 +12,11 @@
   <meta property="og:description" content="End-to-end Microsoft 365 deployment, migration, licensing, and managed support for modern enterprises.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.gracabuildsys.com/microsoft365.html">
-  <meta property="og:image" content="https://www.gracabuildsys.com/assets/images/logo/logo.svg">
+  <meta property="og:image" content="https://www.gracabuildsys.com/assets/images/logo/logo.jpeg">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Microsoft 365 Solutions | GRACA BUILDSYS LLP">
   <meta name="twitter:description" content="Deploy, migrate, and manage Microsoft 365 with expert licensing and 24×7 support.">
-  <link rel="icon" type="image/svg+xml" href="assets/images/logo/logo.svg">
+  <link rel="icon" type="image/svg+xml" href="assets/images/logo/logo.jpeg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -325,49 +325,97 @@
                 <h2 class="section-title">Start Your Microsoft 365 Journey</h2>
                 <p class="text-muted">Tell us about your requirements and receive a customized Microsoft 365 proposal within 24 hours.</p>
               </div>
-              <form class="inquiry-form contact-form" action="forms/contact-handler.php" method="POST" novalidate>
-                <div class="row g-3">
-                  <div class="col-md-6">
-                    <label class="form-label" for="m365-name">Name *</label>
-                    <input type="text" class="form-control" id="m365-name" name="name" required>
-                    <div class="invalid-feedback">Please enter your name.</div>
-                  </div>
-                  <div class="col-md-6">
-                    <label class="form-label" for="m365-company">Company</label>
-                    <input type="text" class="form-control" id="m365-company" name="company">
-                  </div>
-                  <div class="col-md-6">
-                    <label class="form-label" for="m365-mobile">Mobile *</label>
-                    <input type="tel" class="form-control" id="m365-mobile" name="mobile" required>
-                    <div class="invalid-feedback">Please enter a valid mobile number.</div>
-                  </div>
-                  <div class="col-md-6">
-                    <label class="form-label" for="m365-email">Email *</label>
-                    <input type="email" class="form-control" id="m365-email" name="email" required>
-                    <div class="invalid-feedback">Please enter a valid email.</div>
-                  </div>
-                  <div class="col-12">
-                    <label class="form-label" for="m365-users">Number of Users</label>
-                    <select class="form-select" id="m365-users" name="users">
-                      <option value="">Select user count</option>
-                      <option>1–10 users</option>
-                      <option>11–50 users</option>
-                      <option>51–200 users</option>
-                      <option>201–500 users</option>
-                      <option>500+ users</option>
-                    </select>
-                  </div>
-                  <div class="col-12">
-                    <label class="form-label" for="m365-message">Message *</label>
-                    <textarea class="form-control" id="m365-message" name="message" rows="4" required placeholder="Tell us about your current email setup and Microsoft 365 requirements..."></textarea>
-                    <div class="invalid-feedback">Please enter your message.</div>
-                  </div>
-                  <input type="hidden" name="service" value="Microsoft 365">
-                  <div class="col-12 text-center">
-                    <button type="submit" class="btn btn-primary-custom btn-lg">Request Microsoft 365 Quote</button>
-                  </div>
-                </div>
-              </form>
+              <form id="contactForm" class="inquiry-form contact-form" novalidate>
+    <div class="row g-3">
+
+        <!-- Name -->
+        <div class="col-md-6">
+            <label class="form-label" for="name">Name *</label>
+            <input type="text" class="form-control" id="name" name="name" required>
+            <div class="invalid-feedback">
+                Please enter your name.
+            </div>
+        </div>
+
+        <!-- Company -->
+        <div class="col-md-6">
+            <label class="form-label" for="company">Company</label>
+            <input type="text" class="form-control" id="company" name="company">
+        </div>
+
+        <!-- Location -->
+        <div class="col-md-6">
+            <label class="form-label" for="location">Location *</label>
+            <input type="text" class="form-control" id="location" name="location" required>
+            <div class="invalid-feedback">
+                Please enter your location.
+            </div>
+        </div>
+
+        <!-- Mobile -->
+        <div class="col-md-6">
+            <label class="form-label" for="mobile">Mobile Number *</label>
+            <input type="tel" class="form-control" id="mobile" name="mobile" required>
+            <div class="invalid-feedback">
+                Please enter a valid mobile number.
+            </div>
+        </div>
+
+        <!-- Email -->
+        <div class="col-md-6">
+            <label class="form-label" for="email">Email Address *</label>
+            <input type="email" class="form-control" id="email" name="email" required>
+            <div class="invalid-feedback">
+                Please enter a valid email address.
+            </div>
+        </div>
+
+        <!-- Service -->
+        <div class="col-md-6">
+            <label class="form-label" for="service">Service Required *</label>
+            <select class="form-select" id="service" name="service" required>
+                <option value="">Select a Service</option>
+                <option>Microsoft 365</option>
+                <option>Google Workspace</option>
+                <option>Zoho Mail</option>
+                <option>Internet & Connectivity</option>
+                <option>Server Solutions</option>
+                <option>Laptop & Desktop Sales</option>
+                <option>Networking Solutions</option>
+                <option>Security Solutions</option>
+                <option>AI Solutions</option>
+                <option>AMC Support</option>
+                <option>Other</option>
+            </select>
+            <div class="invalid-feedback">
+                Please select a service.
+            </div>
+        </div>
+
+        <!-- Message -->
+        <div class="col-12">
+            <label class="form-label" for="message">Message *</label>
+            <textarea class="form-control"
+                      id="message"
+                      name="message"
+                      rows="5"
+                      placeholder="Tell us about your requirement..."
+                      required></textarea>
+            <div class="invalid-feedback">
+                Please enter your message.
+            </div>
+        </div>
+
+        <!-- Submit Button -->
+        <div class="col-12 text-center mt-3">
+            <button type="submit" class="btn btn-primary-custom btn-lg px-5">
+                <i class="fas fa-paper-plane me-2"></i>
+                Submit Inquiry
+            </button>
+        </div>
+
+    </div>
+</form>
             </div>
           </div>
         </div>
@@ -383,6 +431,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>  
   <script src="assets/js/main.js"></script>
   <script src="assets/js/contact-form.js"></script>
   <script src="assets/js/animations.js"></script>

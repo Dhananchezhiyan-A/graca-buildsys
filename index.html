@@ -12,11 +12,11 @@
   <meta property="og:description" content="Trusted enterprise IT solutions — Cloud Productivity, Microsoft 365, Google Workspace, Infrastructure, Security and AI Solutions.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.gracabuildsys.com/">
-  <meta property="og:image" content="https://www.gracabuildsys.com/assets/images/logo/logo.svg">
+  <meta property="og:image" content="https://www.gracabuildsys.com/assets/images/logo/logo.jpeg">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="GRACA BUILDSYS LLP | Enterprise IT Solutions">
   <meta name="twitter:description" content="Innovate | Integrate | Elevate — Your trusted enterprise IT partner.">
-  <link rel="icon" type="image/svg+xml" href="assets/images/logo/logo.png">
+  <link rel="icon" type="image/svg+xml" href="assets/images/logo/logo.jpeg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -379,51 +379,97 @@
                 <h2 class="section-title">Get in Touch</h2>
                 <p class="text-muted">Request a free consultation or quote. Our team will respond within 24 hours.</p>
               </div>
-              <form class="inquiry-form contact-form" action="forms/contact-handler.php" method="POST" novalidate>
-                <div class="row g-3">
-                  <div class="col-md-6">
-                    <label class="form-label" for="cta-name">Name *</label>
-                    <input type="text" class="form-control" id="cta-name" name="name" required>
-                    <div class="invalid-feedback">Please enter your name.</div>
-                  </div>
-                  <div class="col-md-6">
-                    <label class="form-label" for="cta-company">Company</label>
-                    <input type="text" class="form-control" id="cta-company" name="company">
-                  </div>
-                  <div class="col-md-6">
-                    <label class="form-label" for="cta-mobile">Mobile *</label>
-                    <input type="tel" class="form-control" id="cta-mobile" name="mobile" required>
-                    <div class="invalid-feedback">Please enter a valid mobile number.</div>
-                  </div>
-                  <div class="col-md-6">
-                    <label class="form-label" for="cta-email">Email *</label>
-                    <input type="email" class="form-control" id="cta-email" name="email" required>
-                    <div class="invalid-feedback">Please enter a valid email.</div>
-                  </div>
-                  <div class="col-12">
-                    <label class="form-label" for="cta-service">Service Required</label>
-                    <select class="form-select" id="cta-service" name="service">
-                      <option value="">Select a service</option>
-                      <option>Microsoft 365</option>
-                      <option>Google Workspace</option>
-                      <option>Zoho Mail</option>
-                      <option>IT Infrastructure</option>
-                      <option>Networking</option>
-                      <option>Security Solutions</option>
-                      <option>AI Solutions</option>
-                      <option>Other</option>
-                    </select>
-                  </div>
-                  <div class="col-12">
-                    <label class="form-label" for="cta-message">Message *</label>
-                    <textarea class="form-control" id="cta-message" name="message" rows="4" required></textarea>
-                    <div class="invalid-feedback">Please enter your message.</div>
-                  </div>
-                  <div class="col-12 text-center">
-                    <button type="submit" class="btn btn-primary-custom btn-lg">Submit Inquiry</button>
-                  </div>
-                </div>
-              </form>
+              <form id="contactForm" class="inquiry-form contact-form" novalidate>
+    <div class="row g-3">
+
+        <!-- Name -->
+        <div class="col-md-6">
+            <label class="form-label" for="name">Name *</label>
+            <input type="text" class="form-control" id="name" name="name" required>
+            <div class="invalid-feedback">
+                Please enter your name.
+            </div>
+        </div>
+
+        <!-- Company -->
+        <div class="col-md-6">
+            <label class="form-label" for="company">Company</label>
+            <input type="text" class="form-control" id="company" name="company">
+        </div>
+
+        <!-- Location -->
+        <div class="col-md-6">
+            <label class="form-label" for="location">Location *</label>
+            <input type="text" class="form-control" id="location" name="location" required>
+            <div class="invalid-feedback">
+                Please enter your location.
+            </div>
+        </div>
+
+        <!-- Mobile -->
+        <div class="col-md-6">
+            <label class="form-label" for="mobile">Mobile Number *</label>
+            <input type="tel" class="form-control" id="mobile" name="mobile" required>
+            <div class="invalid-feedback">
+                Please enter a valid mobile number.
+            </div>
+        </div>
+
+        <!-- Email -->
+        <div class="col-md-6">
+            <label class="form-label" for="email">Email Address *</label>
+            <input type="email" class="form-control" id="email" name="email" required>
+            <div class="invalid-feedback">
+                Please enter a valid email address.
+            </div>
+        </div>
+
+        <!-- Service -->
+        <div class="col-md-6">
+            <label class="form-label" for="service">Service Required *</label>
+            <select class="form-select" id="service" name="service" required>
+                <option value="">Select a Service</option>
+                <option>Microsoft 365</option>
+                <option>Google Workspace</option>
+                <option>Zoho Mail</option>
+                <option>Internet & Connectivity</option>
+                <option>Server Solutions</option>
+                <option>Laptop & Desktop Sales</option>
+                <option>Networking Solutions</option>
+                <option>Security Solutions</option>
+                <option>AI Solutions</option>
+                <option>AMC Support</option>
+                <option>Other</option>
+            </select>
+            <div class="invalid-feedback">
+                Please select a service.
+            </div>
+        </div>
+
+        <!-- Message -->
+        <div class="col-12">
+            <label class="form-label" for="message">Message *</label>
+            <textarea class="form-control"
+                      id="message"
+                      name="message"
+                      rows="5"
+                      placeholder="Tell us about your requirement..."
+                      required></textarea>
+            <div class="invalid-feedback">
+                Please enter your message.
+            </div>
+        </div>
+
+        <!-- Submit Button -->
+        <div class="col-12 text-center mt-3">
+            <button type="submit" class="btn btn-primary-custom btn-lg px-5">
+                <i class="fas fa-paper-plane me-2"></i>
+                Submit Inquiry
+            </button>
+        </div>
+
+    </div>
+</form>
             </div>
           </div>
         </div>
@@ -439,8 +485,9 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>  
   <script src="assets/js/main.js"></script>
-  <script src="assets/js/counters.js"></script>
+  <script src="assets/js/counters.js"></script> 
   <script src="assets/js/contact-form.js"></script>
   <script src="assets/js/animations.js"></script>
 </body>
