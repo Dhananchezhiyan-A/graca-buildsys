@@ -1,0 +1,76 @@
+/* GRACA BUILDSYS LLP - Professional Animations */
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in { animation: fadeIn 0.6s ease forwards; }
+.animate-fade-up { animation: fadeUp 0.6s ease forwards; }
+.animate-slide-up { animation: slideUp 0.5s ease forwards; }
+
+.hover-lift {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 30px rgba(0, 35, 102, 0.12);
+}
+
+.image-reveal {
+  overflow: hidden;
+  position: relative;
+}
+
+.image-reveal img,
+.image-reveal svg {
+  transition: transform 0.5s ease;
+}
+
+.image-reveal:hover img,
+.image-reveal:hover svg {
+  transform: scale(1.03);
+}
+
+/* AOS custom easing */
+[data-aos] { pointer-events: auto; }
+
+/* Counter pulse on complete */
+.stat-number.counted {
+  animation: fadeUp 0.5s ease;
+}
+
+/* Smooth card transitions */
+.service-card,
+.feature-card,
+.industry-card,
+.value-card,
+.testimonial-card {
+  will-change: transform;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  [data-aos] {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}

@@ -1,0 +1,86 @@
+/* GRACA BUILDSYS LLP - Responsive Styles */
+
+@media (max-width: 1199.98px) {
+  .hero-headline { font-size: 2.35rem; }
+  .section-title { font-size: 2rem; }
+  .mega-dropdown .dropdown-menu { min-width: 100%; }
+}
+
+@media (max-width: 991.98px) {
+  :root { --header-height: 70px; }
+
+  .section-padding { padding: 60px 0; }
+
+  .hero-section { padding: 120px 0 60px; text-align: center; }
+  .hero-headline { font-size: 2rem; }
+  .hero-subheadline { margin-left: auto; margin-right: auto; }
+  .hero-buttons { justify-content: center; }
+  .hero-illustration { margin-top: 2rem; }
+
+  .mega-menu-grid { grid-template-columns: 1fr; }
+
+  .navbar-collapse {
+    background: var(--white);
+    padding: 1rem;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-md);
+    margin-top: 0.5rem;
+    max-height: 80vh;
+    overflow-y: auto;
+  }
+
+  .navbar-nav .nav-link.active::after { display: none; }
+
+  .page-header { padding: 120px 0 50px; }
+  .page-header h1 { font-size: 2rem; }
+
+  .stat-number { font-size: 2.5rem; }
+
+  .contact-form-section { padding: 2rem; }
+
+  .cta-banner { padding: 3rem 1.5rem; text-align: center; }
+
+  .trust-item { margin-bottom: 0.5rem; }
+
+  .whatsapp-float { bottom: 80px; right: 16px; width: 50px; height: 50px; font-size: 1.5rem; }
+  .back-to-top { right: 16px; bottom: 16px; }
+}
+
+@media (max-width: 767.98px) {
+  .hero-headline { font-size: 1.75rem; }
+  .hero-subheadline { font-size: 1rem; }
+
+  .section-title { font-size: 1.65rem; }
+  .section-subtitle { font-size: 1rem; }
+
+  .hero-buttons { flex-direction: column; align-items: stretch; }
+  .hero-buttons .btn-primary-custom,
+  .hero-buttons .btn-secondary-custom,
+  .hero-buttons .btn-gold { justify-content: center; width: 100%; }
+
+  .feature-card, .service-card { padding: 1.5rem; }
+
+  .stat-number { font-size: 2rem; }
+  .stat-label { font-size: 0.9rem; }
+
+  .testimonial-card { padding: 1.75rem; }
+
+  .newsletter-form { flex-direction: column; }
+
+  .footer-bottom .row > div { text-align: center !important; margin-bottom: 0.5rem; }
+
+  .page-header h1 { font-size: 1.75rem; }
+
+  .contact-form-section { padding: 1.5rem; }
+}
+
+@media (max-width: 575.98px) {
+  .navbar-brand img { height: 42px; }
+
+  .btn-primary-custom,
+  .btn-secondary-custom,
+  .btn-gold { padding: 0.65rem 1.25rem; font-size: 0.9rem; }
+
+  .industry-card { padding: 1rem; }
+  .industry-card i { font-size: 1.5rem; }
+}
