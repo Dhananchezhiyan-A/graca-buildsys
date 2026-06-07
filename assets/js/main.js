@@ -195,24 +195,37 @@
       });
     }
 
-    const testimonialSwiper = document.querySelector('.testimonials-swiper');
-    if (testimonialSwiper) {
-      new Swiper('.testimonials-swiper', {
-        slidesPerView: 1,
-        spaceBetween: 30,
-        loop: true,
-        autoplay: { delay: 5000, disableOnInteraction: false },
-        pagination: { el: '.swiper-pagination', clickable: true },
-        navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev'
-        },
-        breakpoints: {
-          768: { slidesPerView: 2 },
-          1200: { slidesPerView: 3 }
-        }
-      });
+const testimonialSwiper = document.querySelector('.testimonials-swiper');
+
+if (testimonialSwiper) {
+  new Swiper('.testimonials-swiper', {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    loop: true,
+
+    autoplay: {
+      delay: 4000,
+      disableOnInteraction: false,
+      pauseOnMouseEnter: true
+    },
+
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true
+    },
+
+    speed: 1000,
+
+    breakpoints: {
+      768: {
+        slidesPerView: 2
+      },
+      1200: {
+        slidesPerView: 3
+      }
     }
+  });
+}
   }
 
   /* DOM Ready */

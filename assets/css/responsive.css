@@ -84,3 +84,247 @@
   .industry-card { padding: 1rem; }
   .industry-card i { font-size: 1.5rem; }
 }
+
+
+
+@media (max-width: 991px) {
+
+    .feature-card,
+    .service-card,
+    .industry-card,
+    .value-card,
+    .service-detail-card,
+    .contact-info-card {
+
+        border-left: 4px solid var(--microsoft-blue);
+    }
+
+    .feature-card:active,
+    .service-card:active,
+    .industry-card:active {
+
+        transform: scale(0.98);
+    }
+}
+
+
+
+/* Mobile */
+
+@media(max-width:768px){
+
+    .ai-header{
+        padding: 140px 0 80px;
+        text-align: center;
+    }
+
+    .ai-header h1{
+        font-size: 2.2rem;
+    }
+
+    .ai-header .lead{
+        font-size: 1rem;
+    }
+
+    .hero-buttons{
+        justify-content: center;
+    }
+
+    .ai-header .breadcrumb{
+        justify-content: center;
+    }
+}
+
+
+@media (max-width: 768px){
+
+    .contact-header{
+        padding: 140px 0 80px;
+    }
+
+    .contact-header h1{
+        font-size: 2.2rem;
+    }
+
+    .page-description{
+        font-size: 1rem;
+        padding: 0 15px;
+    }
+
+    .page-actions{
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .page-actions .btn{
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+
+@media(max-width:768px){
+
+    .google-workspace-header{
+        padding:140px 0 80px;
+        text-align:center;
+    }
+
+    .google-workspace-header h1{
+        font-size:2.2rem;
+    }
+
+    .google-workspace-header .lead{
+        font-size:1rem;
+    }
+
+    .google-workspace-header .breadcrumb{
+        justify-content:center;
+    }
+
+    .hero-buttons{
+        justify-content:center;
+    }
+}
+
+
+@media(max-width:768px){
+
+    .infrastructure-header{
+        padding:140px 0 80px;
+        text-align:center;
+    }
+
+    .infrastructure-header h1{
+        font-size:2.2rem;
+    }
+
+    .infrastructure-header .lead{
+        font-size:1rem;
+    }
+
+    .hero-buttons{
+        justify-content:center;
+    }
+
+    .infrastructure-header .breadcrumb{
+        justify-content:center;
+    }
+}
+
+
+
+@media(max-width:768px){
+
+    .microsoft-header{
+        padding:140px 0 80px;
+        text-align:center;
+    }
+
+    .microsoft-header h1{
+        font-size:2.2rem;
+    }
+
+    .microsoft-header .lead{
+        font-size:1rem;
+    }
+
+    .hero-buttons{
+        justify-content:center;
+    }
+
+    .microsoft-header .breadcrumb{
+        justify-content:center;
+    }
+}
+
+
+@media (max-width: 991px){
+
+    .networking-header{
+        padding: 150px 0 90px;
+    }
+
+    .networking-header h1{
+        font-size: 2.8rem;
+    }
+
+}
+@media (max-width: 768px){
+
+    .networking-header{
+        padding: 140px 0 80px;
+        text-align: center;
+    }
+
+    .networking-header h1{
+        font-size: 2.2rem;
+    }
+
+    .networking-header .lead{
+        font-size: 1rem;
+    }
+
+    .hero-buttons{
+        justify-content: center;
+    }
+
+    .networking-header .breadcrumb{
+        justify-content: center;
+    }
+
+    .page-badge{
+        font-size: 13px;
+        padding: 8px 16px;
+    }
+}
+
+
+@media(max-width:768px){
+
+    .security-header{
+        padding:140px 0 80px;
+        text-align:center;
+    }
+
+    .security-header h1{
+        font-size:2.2rem;
+    }
+
+    .security-header .lead{
+        font-size:1rem;
+    }
+
+    .security-header .breadcrumb{
+        justify-content:center;
+    }
+
+    .hero-buttons{
+        justify-content:center;
+    }
+}
+
+
+@media(max-width:768px){
+
+    .zoho-header{
+        padding:140px 0 80px;
+        text-align:center;
+    }
+
+    .zoho-header h1{
+        font-size:2.2rem;
+    }
+
+    .zoho-header .lead{
+        font-size:1rem;
+    }
+
+    .hero-buttons{
+        justify-content:center;
+    }
+
+    .zoho-header .breadcrumb{
+        justify-content:center;
+    }
+}
