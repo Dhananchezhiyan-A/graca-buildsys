@@ -244,12 +244,37 @@ img { max-width: 100%; height: auto; display: block; }
 
 /* Hero */
 .hero-section {
-  padding: 140px 0 80px;
-  background: var(--white);
-  position: relative;
-  overflow: hidden;
+    position: relative;
+    padding: 180px 0 120px;
+    min-height: 700px;
+
+    background:
+        linear-gradient(
+            rgba(255,255,255,0.35),
+            rgba(255,255,255,0.35)
+        ),
+        url('../images/logo/image.png');
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    align-items: center;
 }
 
+.hero-headline{
+    font-size: 4rem;
+    font-weight: 800;
+    color: #002366;
+    line-height: 1.15;
+}
+
+.hero-subheadline{
+    font-size: 1.3rem;
+    max-width: 700px;
+    color: white;
+}
 .hero-section::before {
   content: '';
   position: absolute;
@@ -270,9 +295,10 @@ img { max-width: 100%; height: auto; display: block; }
 
 .hero-subheadline {
   font-size: 1.15rem;
-  color: var(--text-muted);
+  color: #ffffff !important;
   margin-bottom: 2rem;
   max-width: 540px;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.3);
 }
 
 .hero-buttons { display: flex; flex-wrap: wrap; gap: 1rem; }
@@ -1012,3 +1038,34 @@ img { max-width: 100%; height: auto; display: block; }
 .invalid-feedback { display: none; font-size: 0.85rem; }
 .was-validated .form-control:invalid ~ .invalid-feedback,
 .was-validated .form-select:invalid ~ .invalid-feedback { display: block; }
+
+
+.feature-card,
+.service-card,
+.industry-card,
+.value-card,
+.service-detail-card,
+.contact-info-card {
+    transition: all 0.35s ease;
+}
+
+.feature-card:hover,
+.service-card:hover,
+.industry-card:hover,
+.value-card:hover,
+.service-detail-card:hover,
+.contact-info-card:hover {
+    background: var(--primary-navy);
+    border-color: var(--primary-navy);
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0,35,102,0.25);
+}
+
+.feature-card:hover *,
+.service-card:hover *,
+.industry-card:hover *,
+.value-card:hover *,
+.service-detail-card:hover *,
+.contact-info-card:hover * {
+    color: #ffffff !important;
+}
