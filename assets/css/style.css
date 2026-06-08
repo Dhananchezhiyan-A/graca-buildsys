@@ -1777,3 +1777,23 @@ img { max-width: 100%; height: auto; display: block; }
 .zoho-header .breadcrumb-item + .breadcrumb-item::before{
     color:rgba(255,255,255,0.60);
 }
+
+.map-container{
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.10);
+}
+
+.office-address{
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.office-address p{
+    color: #555;
+    margin-bottom: 6px;
+}
