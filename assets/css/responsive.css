@@ -1,330 +1,1419 @@
-/* GRACA BUILDSYS LLP - Responsive Styles */
+/* ============================================================
+   GRACA BUILDSYS LLP — responsive.css
+   Enterprise Responsive Stylesheet
+   Separate from style.css — DO NOT merge
+   ============================================================ */
 
-@media (max-width: 1199.98px) {
-  .hero-headline { font-size: 2.35rem; }
-  .section-title { font-size: 2rem; }
-  .mega-dropdown .dropdown-menu { min-width: 100%; }
+/* ============================================================
+   GLOBAL RESPONSIVE FOUNDATION
+   ============================================================ */
+
+html,
+body {
+  overflow-x: hidden;
+  width: 100%;
 }
 
-@media (max-width: 991.98px) {
-  :root { --header-height: 70px; }
-
-  .section-padding { padding: 60px 0; }
-
-  .hero-section { padding: 120px 0 60px; text-align: center; }
-  .hero-headline { font-size: 2rem; }
-  .hero-subheadline { margin-left: auto; margin-right: auto; }
-  .hero-buttons { justify-content: center; }
-  .hero-illustration { margin-top: 2rem; }
-
-  .mega-menu-grid { grid-template-columns: 1fr; }
-
-  .navbar-collapse {
-    background: var(--white);
-    padding: 1rem;
-    border-radius: var(--radius-md);
-    box-shadow: var(--shadow-md);
-    margin-top: 0.5rem;
-    max-height: 80vh;
-    overflow-y: auto;
-  }
-
-  .navbar-nav .nav-link.active::after { display: none; }
-
-  .page-header { padding: 120px 0 50px; }
-  .page-header h1 { font-size: 2rem; }
-
-  .stat-number { font-size: 2.5rem; }
-
-  .contact-form-section { padding: 2rem; }
-
-  .cta-banner { padding: 3rem 1.5rem; text-align: center; }
-
-  .trust-item { margin-bottom: 0.5rem; }
-
-  .whatsapp-float { bottom: 80px; right: 16px; width: 50px; height: 50px; font-size: 1.5rem; }
-  .back-to-top { right: 16px; bottom: 16px; }
+img,
+video {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
-@media (max-width: 767.98px) {
-  .hero-headline { font-size: 1.75rem; }
-  .hero-subheadline { font-size: 1rem; }
-
-  .section-title { font-size: 1.65rem; }
-  .section-subtitle { font-size: 1rem; }
-
-  .hero-buttons { flex-direction: column; align-items: stretch; }
-  .hero-buttons .btn-primary-custom,
-  .hero-buttons .btn-secondary-custom,
-  .hero-buttons .btn-gold { justify-content: center; width: 100%; }
-
-  .feature-card, .service-card { padding: 1.5rem; }
-
-  .stat-number { font-size: 2rem; }
-  .stat-label { font-size: 0.9rem; }
-
-  .testimonial-card { padding: 1.75rem; }
-
-  .newsletter-form { flex-direction: column; }
-
-  .footer-bottom .row > div { text-align: center !important; margin-bottom: 0.5rem; }
-
-  .page-header h1 { font-size: 1.75rem; }
-
-  .contact-form-section { padding: 1.5rem; }
+.container,
+.container-fluid {
+  width: 100%;
 }
+
+/* ============================================================
+   Extra Small Mobile — max-width: 575.98px
+   ============================================================ */
 
 @media (max-width: 575.98px) {
-  .navbar-brand img { height: 42px; }
 
+  /* --- Header --- */
+  .site-header {
+    height: auto;
+    min-height: 64px;
+  }
+
+  .navbar-brand img {
+    height: 40px;
+    max-height: 40px;
+    width: auto;
+  }
+
+  .navbar-collapse {
+    background: #ffffff;
+    border-top: 1px solid #E5E7EB;
+    padding: 1rem 0;
+    margin-top: 0.5rem;
+  }
+
+  .navbar-nav {
+    width: 100%;
+    text-align: center;
+  }
+
+  .navbar-nav .nav-link {
+    padding: 0.75rem 1rem !important;
+    border-bottom: 1px solid #F3F4F6;
+    font-size: 0.95rem;
+    display: block;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .navbar-nav .nav-link.active::after {
+    display: none;
+  }
+
+  .mega-dropdown .dropdown-menu {
+    min-width: 100%;
+    width: 100%;
+    border-radius: 0;
+    padding: 1rem;
+    box-shadow: none;
+    border-top: 1px solid #E5E7EB;
+    margin-top: 0;
+  }
+
+  .mega-menu-grid {
+    grid-template-columns: 1fr;
+    gap: 0.25rem;
+  }
+
+  .mega-menu-item {
+    padding: 0.65rem 0.75rem;
+    min-height: 44px;
+  }
+
+  /* --- Hero Section --- */
+  .hero-section {
+    padding: 100px 0 60px;
+    min-height: auto;
+    text-align: center;
+  }
+
+  .hero-headline {
+    font-size: 1.875rem;
+    line-height: 1.25;
+    margin-bottom: 1rem;
+  }
+
+  .hero-subheadline {
+    font-size: 1rem;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.75rem;
+  }
+
+  .hero-buttons .btn-primary-custom,
+  .hero-buttons .btn-secondary-custom,
+  .hero-buttons .btn-gold,
+  .hero-buttons .btn-outline-light-custom {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .hero-illustration {
+    padding: 1rem 0 0;
+    margin-top: 1.5rem;
+  }
+
+  /* --- Page Hero Banners --- */
+  .about-header,
+  .services-header,
+  .microsoft-header,
+  .google-workspace-header,
+  .zoho-header,
+  .infrastructure-header,
+  .networking-header,
+  .security-header,
+  .ai-header,
+  .contact-header {
+    padding-top: 120px;
+    padding-bottom: 80px;
+    text-align: center;
+    min-height: auto;
+  }
+
+  .about-header h1,
+  .services-header h1,
+  .microsoft-header h1,
+  .google-workspace-header h1,
+  .zoho-header h1,
+  .infrastructure-header h1,
+  .networking-header h1,
+  .security-header h1,
+  .ai-header h1,
+  .contact-header h1 {
+    font-size: 1.875rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .page-description,
+  .about-header .lead,
+  .services-header .lead,
+  .microsoft-header .lead,
+  .google-workspace-header .lead,
+  .zoho-header .lead,
+  .infrastructure-header .lead,
+  .networking-header .lead,
+  .security-header .lead,
+  .ai-header .lead {
+    font-size: 1rem;
+    max-width: 100%;
+  }
+
+  .page-actions {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.75rem;
+  }
+
+  .page-actions .btn-primary-custom,
+  .page-actions .btn-outline-light-custom,
+  .page-actions .btn-gold,
+  .page-actions .btn-outline-light {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .page-badge {
+    font-size: 12px;
+    padding: 7px 14px;
+  }
+
+  /* --- Section Spacing --- */
+  .section-padding {
+    padding: 50px 0;
+  }
+
+  /* --- Section Headers --- */
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  .section-subtitle {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .section-header {
+    margin-bottom: 2rem;
+  }
+
+  /* --- Buttons --- */
   .btn-primary-custom,
   .btn-secondary-custom,
-  .btn-gold { padding: 0.65rem 1.25rem; font-size: 0.9rem; }
+  .btn-gold,
+  .btn-outline-light-custom {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    padding: 0.75rem 1.25rem;
+  }
 
-  .industry-card { padding: 1rem; }
-  .industry-card i { font-size: 1.5rem; }
+  /* --- Service / Feature / Value Cards --- */
+  .service-card,
+  .feature-card,
+  .service-detail-card,
+  .industry-card,
+  .value-card,
+  .contact-info-card {
+    padding: 1.5rem 1.25rem;
+    margin-bottom: 1rem;
+  }
+
+  /* --- Statistics --- */
+  .stats-section {
+    padding: 40px 0;
+  }
+
+  .stat-number {
+    font-size: 2rem;
+  }
+
+  .stat-label {
+    font-size: 0.875rem;
+  }
+
+  .stat-item {
+    padding: 0.75rem 0.5rem;
+  }
+
+  /* --- Industries --- */
+  .industry-card {
+    padding: 1.25rem;
+  }
+
+  /* --- Testimonials --- */
+  .testimonial-card {
+    padding: 1.5rem 1.25rem;
+  }
+
+  .testimonial-text {
+    font-size: 0.95rem;
+  }
+
+  /* --- Client Logos --- */
+  .client-logo-slide {
+    height: 60px;
+    padding: 0.5rem 1rem;
+  }
+
+  .client-logo-slide .client-name {
+    font-size: 0.875rem;
+  }
+
+  /* --- FAQ --- */
+  .faq-question {
+    padding: 1rem 1.25rem;
+    font-size: 0.9rem;
+    min-height: 44px;
+  }
+
+  .faq-answer {
+    padding: 0 1.25rem;
+  }
+
+  .faq-answer.show {
+    padding: 0 1.25rem 1rem;
+  }
+
+  /* --- Contact Form --- */
+  .contact-form-section {
+    padding: 1.5rem 1.25rem;
+    border-radius: 12px;
+  }
+
+  .form-control,
+  .form-select {
+    font-size: 1rem;
+    min-height: 44px;
+  }
+
+  /* --- Footer --- */
+  .site-footer {
+    padding: 40px 0 0;
+    text-align: center;
+  }
+
+  .site-footer h5::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .footer-links {
+    margin-bottom: 1.5rem;
+  }
+
+  .footer-social {
+    justify-content: center;
+  }
+
+  .newsletter-form {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .newsletter-form input,
+  .newsletter-form button {
+    width: 100%;
+    border-radius: 8px;
+  }
+
+  .footer-bottom {
+    text-align: center;
+    padding: 1.25rem 0;
+  }
+
+  .footer-bottom .d-flex {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  /* --- Swiper --- */
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: none !important;
+  }
+
+  /* --- Floating Buttons --- */
+  .whatsapp-float {
+    width: 46px;
+    height: 46px;
+    font-size: 1.35rem;
+    bottom: 80px;
+    right: 16px;
+  }
+
+  .back-to-top {
+    width: 40px;
+    height: 40px;
+    font-size: 0.95rem;
+    bottom: 16px;
+    right: 16px;
+  }
+
+  /* --- CTA Banner --- */
+  .cta-banner {
+    padding: 2.5rem 1.5rem;
+    text-align: center;
+    border-radius: 12px;
+  }
+
+  .cta-banner h2 {
+    font-size: 1.5rem;
+  }
+
+  /* --- Pricing --- */
+  .pricing-card {
+    padding: 1.5rem;
+  }
+
+  /* --- Trust Bar --- */
+  .trust-bar {
+    padding: 1.5rem 0;
+  }
+
+  .trust-item {
+    padding: 0.5rem 0.25rem;
+  }
+
+  .trust-item span {
+    font-size: 0.8rem;
+  }
 }
 
+/* ============================================================
+   Mobile — 576px to 767.98px
+   ============================================================ */
 
+@media (min-width: 576px) and (max-width: 767.98px) {
 
-@media (max-width: 991px) {
+  /* --- Header --- */
+  .site-header {
+    height: auto;
+    min-height: 70px;
+  }
 
-    .feature-card,
-    .service-card,
-    .industry-card,
-    .value-card,
-    .service-detail-card,
-    .contact-info-card {
+  .navbar-brand img {
+    height: 44px;
+    max-height: 44px;
+    width: auto;
+  }
 
-        border-left: 4px solid var(--microsoft-blue);
-    }
+  .navbar-collapse {
+    background: #ffffff;
+    border-top: 1px solid #E5E7EB;
+    padding: 0.75rem 0;
+    margin-top: 0.5rem;
+  }
 
-    .feature-card:active,
-    .service-card:active,
-    .industry-card:active {
+  .navbar-nav {
+    width: 100%;
+    text-align: center;
+  }
 
-        transform: scale(0.98);
-    }
+  .navbar-nav .nav-link {
+    padding: 0.7rem 1rem !important;
+    border-bottom: 1px solid #F3F4F6;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .navbar-nav .nav-link.active::after {
+    display: none;
+  }
+
+  .mega-dropdown .dropdown-menu {
+    min-width: 100%;
+    width: 100%;
+    border-radius: 0;
+    padding: 1rem;
+    box-shadow: none;
+    border-top: 1px solid #E5E7EB;
+  }
+
+  .mega-menu-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.35rem;
+  }
+
+  /* --- Hero Section --- */
+  .hero-section {
+    padding: 110px 0 70px;
+    min-height: auto;
+    text-align: center;
+  }
+
+  .hero-headline {
+    font-size: 2.25rem;
+    line-height: 1.2;
+  }
+
+  .hero-subheadline {
+    font-size: 1.05rem;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .hero-buttons .btn-primary-custom,
+  .hero-buttons .btn-secondary-custom,
+  .hero-buttons .btn-gold,
+  .hero-buttons .btn-outline-light-custom {
+    width: 100%;
+    max-width: 320px;
+    justify-content: center;
+  }
+
+  .hero-illustration {
+    margin-top: 2rem;
+    padding: 1rem 0;
+  }
+
+  /* --- Page Hero Banners --- */
+  .about-header,
+  .services-header,
+  .microsoft-header,
+  .google-workspace-header,
+  .zoho-header,
+  .infrastructure-header,
+  .networking-header,
+  .security-header,
+  .ai-header,
+  .contact-header {
+    padding-top: 120px;
+    padding-bottom: 80px;
+    text-align: center;
+    min-height: auto;
+  }
+
+  .about-header h1,
+  .services-header h1,
+  .microsoft-header h1,
+  .google-workspace-header h1,
+  .zoho-header h1,
+  .infrastructure-header h1,
+  .networking-header h1,
+  .security-header h1,
+  .ai-header h1,
+  .contact-header h1 {
+    font-size: 2.25rem;
+  }
+
+  .page-description,
+  .about-header .lead,
+  .services-header .lead,
+  .microsoft-header .lead,
+  .google-workspace-header .lead,
+  .zoho-header .lead,
+  .infrastructure-header .lead,
+  .networking-header .lead,
+  .security-header .lead,
+  .ai-header .lead {
+    font-size: 1.05rem;
+    max-width: 100%;
+  }
+
+  .page-actions {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+
+  .page-actions .btn-primary-custom,
+  .page-actions .btn-outline-light-custom,
+  .page-actions .btn-gold,
+  .page-actions .btn-outline-light {
+    min-width: 160px;
+  }
+
+  /* --- Section Spacing --- */
+  .section-padding {
+    padding: 60px 0;
+  }
+
+  .section-title {
+    font-size: 1.75rem;
+  }
+
+  .section-subtitle {
+    font-size: 1rem;
+    margin-bottom: 2.25rem;
+  }
+
+  /* --- Buttons --- */
+  .btn-primary-custom,
+  .btn-secondary-custom,
+  .btn-gold,
+  .btn-outline-light-custom {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+
+  /* --- Cards --- */
+  .service-card,
+  .feature-card,
+  .service-detail-card,
+  .value-card,
+  .contact-info-card {
+    padding: 1.75rem 1.5rem;
+  }
+
+  .industry-card {
+    padding: 1.25rem;
+  }
+
+  /* --- Statistics --- */
+  .stat-number {
+    font-size: 2.25rem;
+  }
+
+  /* --- Testimonials --- */
+  .testimonial-card {
+    padding: 2rem 1.5rem;
+  }
+
+  /* --- Footer --- */
+  .site-footer {
+    padding: 40px 0 0;
+    text-align: center;
+  }
+
+  .site-footer h5::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .footer-social {
+    justify-content: center;
+  }
+
+  .newsletter-form {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .newsletter-form input,
+  .newsletter-form button {
+    width: 100%;
+  }
+
+  .footer-bottom {
+    text-align: center;
+  }
+
+  .footer-bottom .d-flex {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  /* --- Swiper --- */
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: none !important;
+  }
+
+  /* --- Floating Buttons --- */
+  .whatsapp-float {
+    width: 48px;
+    height: 48px;
+    font-size: 1.45rem;
+    bottom: 82px;
+    right: 18px;
+  }
+
+  .back-to-top {
+    width: 42px;
+    height: 42px;
+    font-size: 1rem;
+    bottom: 18px;
+    right: 18px;
+  }
+
+  /* --- Contact Form --- */
+  .contact-form-section {
+    padding: 2rem 1.5rem;
+  }
+
+  /* --- CTA Banner --- */
+  .cta-banner {
+    padding: 3rem 1.75rem;
+    text-align: center;
+  }
+
+  .cta-banner h2 {
+    font-size: 1.75rem;
+  }
+
+  /* --- Trust Bar --- */
+  .trust-item span {
+    font-size: 0.825rem;
+  }
 }
 
+/* ============================================================
+   Tablet — 768px to 991.98px
+   ============================================================ */
 
+@media (min-width: 768px) and (max-width: 991.98px) {
 
-/* Mobile */
+  /* --- Header --- */
+  .site-header {
+    height: auto;
+    min-height: 72px;
+  }
 
-@media(max-width:768px){
+  .navbar-brand img {
+    height: 44px;
+    max-height: 44px;
+    width: auto;
+  }
 
-    .ai-header{
-        padding: 140px 0 80px;
-        text-align: center;
-    }
+  .navbar-collapse {
+    background: #ffffff;
+    border-top: 1px solid #E5E7EB;
+    padding: 0.75rem 0;
+    margin-top: 0.25rem;
+  }
 
-    .ai-header h1{
-        font-size: 2.2rem;
-    }
+  .navbar-nav {
+    width: 100%;
+  }
 
-    .ai-header .lead{
-        font-size: 1rem;
-    }
+  .navbar-nav .nav-link {
+    padding: 0.65rem 1rem !important;
+    border-bottom: 1px solid #F3F4F6;
+    min-height: 44px;
+    font-size: 0.9rem;
+  }
 
-    .hero-buttons{
-        justify-content: center;
-    }
+  .navbar-nav .nav-link.active::after {
+    display: none;
+  }
 
-    .ai-header .breadcrumb{
-        justify-content: center;
-    }
+  .mega-dropdown .dropdown-menu {
+    min-width: 100%;
+    width: 100%;
+    border-radius: 0;
+    padding: 1.25rem;
+    box-shadow: none;
+    border-top: 1px solid #E5E7EB;
+  }
+
+  .mega-menu-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.4rem;
+  }
+
+  /* --- Hero Section --- */
+  .hero-section {
+    padding: 150px 0 90px;
+    min-height: auto;
+  }
+
+  .hero-headline {
+    font-size: 2.75rem;
+    line-height: 1.2;
+  }
+
+  .hero-subheadline {
+    font-size: 1.1rem;
+  }
+
+  .hero-buttons {
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+
+  .hero-illustration {
+    margin-top: 2.5rem;
+    padding: 1rem 0;
+  }
+
+  /* --- Page Hero Banners --- */
+  .about-header,
+  .services-header,
+  .microsoft-header,
+  .google-workspace-header,
+  .zoho-header,
+  .infrastructure-header,
+  .networking-header,
+  .security-header,
+  .ai-header,
+  .contact-header {
+    padding-top: 150px;
+    padding-bottom: 100px;
+    min-height: auto;
+  }
+
+  .about-header h1,
+  .services-header h1,
+  .microsoft-header h1,
+  .google-workspace-header h1,
+  .zoho-header h1,
+  .infrastructure-header h1,
+  .networking-header h1,
+  .security-header h1,
+  .ai-header h1,
+  .contact-header h1 {
+    font-size: 2.75rem;
+  }
+
+  .page-description,
+  .about-header .lead,
+  .services-header .lead,
+  .microsoft-header .lead,
+  .google-workspace-header .lead,
+  .zoho-header .lead,
+  .infrastructure-header .lead,
+  .networking-header .lead,
+  .security-header .lead,
+  .ai-header .lead {
+    font-size: 1.1rem;
+  }
+
+  /* --- Section Spacing --- */
+  .section-padding {
+    padding: 80px 0;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .section-subtitle {
+    font-size: 1.05rem;
+    margin-bottom: 2.5rem;
+  }
+
+  /* --- Statistics --- */
+  .stat-number {
+    font-size: 2.5rem;
+  }
+
+  /* --- Cards --- */
+  .service-card,
+  .feature-card,
+  .value-card,
+  .service-detail-card,
+  .contact-info-card {
+    padding: 1.75rem;
+  }
+
+  /* --- Footer --- */
+  .site-footer {
+    padding: 50px 0 0;
+  }
+
+  .newsletter-form {
+    flex-direction: row;
+  }
+
+  .newsletter-form input {
+    flex: 1;
+  }
+
+  /* --- Swiper --- */
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: none !important;
+  }
+
+  /* --- Floating Buttons --- */
+  .whatsapp-float {
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+    bottom: 86px;
+    right: 20px;
+  }
+
+  .back-to-top {
+    width: 44px;
+    height: 44px;
+    bottom: 20px;
+    right: 20px;
+  }
+
+  /* --- Contact Form --- */
+  .contact-form-section {
+    padding: 2.5rem 2rem;
+  }
+
+  /* --- CTA Banner --- */
+  .cta-banner {
+    padding: 3.5rem 2rem;
+  }
+
+  .cta-banner h2 {
+    font-size: 2rem;
+  }
+
+  /* --- Trust Bar --- */
+  .trust-item span {
+    font-size: 0.85rem;
+  }
+
+  .trust-item i {
+    font-size: 1.35rem;
+  }
 }
 
+/* ============================================================
+   Small Laptop — 992px to 1199.98px
+   ============================================================ */
 
-@media (max-width: 768px){
+@media (min-width: 992px) and (max-width: 1199.98px) {
 
-    .contact-header{
-        padding: 140px 0 80px;
-    }
+  /* --- Header --- */
+  .navbar-brand img {
+    height: 46px;
+    width: auto;
+  }
 
-    .contact-header h1{
-        font-size: 2.2rem;
-    }
+  .navbar-nav .nav-link {
+    padding: 0.5rem 0.65rem !important;
+    font-size: 0.875rem;
+  }
 
-    .page-description{
-        font-size: 1rem;
-        padding: 0 15px;
-    }
+  .mega-dropdown .dropdown-menu {
+    min-width: 460px;
+  }
 
-    .page-actions{
-        flex-direction: column;
-        width: 100%;
-    }
+  /* --- Hero Section --- */
+  .hero-section {
+    padding: 160px 0 100px;
+  }
 
-    .page-actions .btn{
-        width: 100%;
-        max-width: 300px;
-    }
+  .hero-headline {
+    font-size: 3.25rem;
+  }
+
+  .hero-subheadline {
+    font-size: 1.1rem;
+  }
+
+  /* --- Page Hero Banners --- */
+  .about-header,
+  .services-header,
+  .microsoft-header,
+  .google-workspace-header,
+  .zoho-header,
+  .infrastructure-header,
+  .networking-header,
+  .security-header,
+  .ai-header,
+  .contact-header {
+    padding-top: 160px;
+    padding-bottom: 110px;
+  }
+
+  .about-header h1,
+  .services-header h1,
+  .microsoft-header h1,
+  .google-workspace-header h1,
+  .zoho-header h1,
+  .infrastructure-header h1,
+  .networking-header h1,
+  .security-header h1,
+  .ai-header h1,
+  .contact-header h1 {
+    font-size: 3rem;
+  }
+
+  /* --- Section Spacing --- */
+  .section-padding {
+    padding: 90px 0;
+  }
+
+  .section-title {
+    font-size: 2.1rem;
+  }
+
+  /* --- Statistics --- */
+  .stat-number {
+    font-size: 2.75rem;
+  }
+
+  /* --- Swiper --- */
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: none !important;
+  }
+
+  /* --- CTA Banner --- */
+  .cta-banner {
+    padding: 3.75rem 2.5rem;
+  }
 }
 
+/* ============================================================
+   Desktop — 1200px to 1399.98px
+   ============================================================ */
 
-@media(max-width:768px){
+@media (min-width: 1200px) and (max-width: 1399.98px) {
 
-    .google-workspace-header{
-        padding:140px 0 80px;
-        text-align:center;
-    }
+  /* --- Header --- */
+  .navbar-brand img {
+    height: 50px;
+    width: auto;
+  }
 
-    .google-workspace-header h1{
-        font-size:2.2rem;
-    }
+  .navbar-nav .nav-link {
+    font-size: 0.9rem;
+    padding: 0.5rem 0.85rem !important;
+  }
 
-    .google-workspace-header .lead{
-        font-size:1rem;
-    }
+  .mega-dropdown .dropdown-menu {
+    min-width: 500px;
+  }
 
-    .google-workspace-header .breadcrumb{
-        justify-content:center;
-    }
+  /* --- Hero Section --- */
+  .hero-section {
+    padding: 180px 0 120px;
+  }
 
-    .hero-buttons{
-        justify-content:center;
-    }
+  .hero-headline {
+    font-size: 3.5rem;
+  }
+
+  .hero-subheadline {
+    font-size: 1.15rem;
+  }
+
+  /* --- Page Hero Banners --- */
+  .about-header,
+  .services-header,
+  .microsoft-header,
+  .google-workspace-header,
+  .zoho-header,
+  .infrastructure-header,
+  .networking-header,
+  .security-header,
+  .ai-header,
+  .contact-header {
+    padding-top: 180px;
+    padding-bottom: 120px;
+  }
+
+  /* --- Section Spacing --- */
+  .section-padding {
+    padding: 100px 0;
+  }
+
+  /* --- Statistics --- */
+  .stat-number {
+    font-size: 3rem;
+  }
+
+  /* --- Swiper --- */
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: none !important;
+  }
 }
 
+/* ============================================================
+   Large Desktop — min-width: 1400px
+   ============================================================ */
 
-@media(max-width:768px){
+@media (min-width: 1400px) {
 
-    .infrastructure-header{
-        padding:140px 0 80px;
-        text-align:center;
-    }
+  /* --- Header --- */
+  .navbar-brand img {
+    height: 52px;
+    width: auto;
+  }
 
-    .infrastructure-header h1{
-        font-size:2.2rem;
-    }
+  .navbar-nav .nav-link {
+    font-size: 0.95rem;
+    padding: 0.5rem 1rem !important;
+  }
 
-    .infrastructure-header .lead{
-        font-size:1rem;
-    }
+  .mega-dropdown .dropdown-menu {
+    min-width: 540px;
+  }
 
-    .hero-buttons{
-        justify-content:center;
-    }
+  /* --- Hero Section --- */
+  .hero-section {
+    padding: 200px 0 140px;
+    min-height: 760px;
+  }
 
-    .infrastructure-header .breadcrumb{
-        justify-content:center;
-    }
+  .hero-headline {
+    font-size: 4rem;
+  }
+
+  .hero-subheadline {
+    font-size: 1.2rem;
+  }
+
+  /* --- Page Hero Banners --- */
+  .about-header,
+  .services-header,
+  .microsoft-header,
+  .google-workspace-header,
+  .zoho-header,
+  .infrastructure-header,
+  .networking-header,
+  .security-header,
+  .ai-header,
+  .contact-header {
+    padding-top: 200px;
+    padding-bottom: 140px;
+  }
+
+  .about-header h1,
+  .services-header h1,
+  .microsoft-header h1,
+  .google-workspace-header h1,
+  .zoho-header h1,
+  .infrastructure-header h1,
+  .networking-header h1,
+  .security-header h1,
+  .ai-header h1,
+  .contact-header h1 {
+    font-size: 4rem;
+  }
+
+  /* --- Section Spacing --- */
+  .section-padding {
+    padding: 110px 0;
+  }
+
+  .section-title {
+    font-size: 2.5rem;
+  }
+
+  .section-subtitle {
+    font-size: 1.15rem;
+  }
+
+  /* --- Statistics --- */
+  .stat-number {
+    font-size: 3.25rem;
+  }
+
+  /* --- Swiper --- */
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: none !important;
+  }
+
+  /* --- CTA Banner --- */
+  .cta-banner {
+    padding: 5rem 4rem;
+  }
 }
 
+/* ============================================================
+   COMPONENT-LEVEL RESPONSIVE RULES
+   Applied across multiple breakpoints via shared logic
+   ============================================================ */
 
+/* --- Swiper Slides Responsive Config via CSS --- */
+/* Note: Swiper JS breakpoints handle slide counts.
+   These CSS rules ensure visual consistency. */
 
-@media(max-width:768px){
+@media (max-width: 767.98px) {
 
-    .microsoft-header{
-        padding:140px 0 80px;
-        text-align:center;
-    }
+  .testimonials-swiper .testimonial-card,
+  .client-swiper .client-logo-slide {
+    width: 100%;
+  }
 
-    .microsoft-header h1{
-        font-size:2.2rem;
-    }
-
-    .microsoft-header .lead{
-        font-size:1rem;
-    }
-
-    .hero-buttons{
-        justify-content:center;
-    }
-
-    .microsoft-header .breadcrumb{
-        justify-content:center;
-    }
+  .swiper-pagination {
+    display: flex !important;
+    justify-content: center;
+  }
 }
 
-
-@media (max-width: 991px){
-
-    .networking-header{
-        padding: 150px 0 90px;
-    }
-
-    .networking-header h1{
-        font-size: 2.8rem;
-    }
-
-}
-@media (max-width: 768px){
-
-    .networking-header{
-        padding: 140px 0 80px;
-        text-align: center;
-    }
-
-    .networking-header h1{
-        font-size: 2.2rem;
-    }
-
-    .networking-header .lead{
-        font-size: 1rem;
-    }
-
-    .hero-buttons{
-        justify-content: center;
-    }
-
-    .networking-header .breadcrumb{
-        justify-content: center;
-    }
-
-    .page-badge{
-        font-size: 13px;
-        padding: 8px 16px;
-    }
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .swiper-pagination {
+    display: flex !important;
+    justify-content: center;
+  }
 }
 
+/* --- Accessibility: Touch Targets --- */
+@media (max-width: 991.98px) {
 
-@media(max-width:768px){
+  a,
+  button,
+  input[type="submit"],
+  input[type="button"],
+  .btn-primary-custom,
+  .btn-secondary-custom,
+  .btn-gold,
+  .btn-outline-light-custom,
+  .nav-link,
+  .faq-question,
+  .mega-menu-item {
+    min-height: 44px;
+  }
 
-    .security-header{
-        padding:140px 0 80px;
-        text-align:center;
-    }
-
-    .security-header h1{
-        font-size:2.2rem;
-    }
-
-    .security-header .lead{
-        font-size:1rem;
-    }
-
-    .security-header .breadcrumb{
-        justify-content:center;
-    }
-
-    .hero-buttons{
-        justify-content:center;
-    }
+  .form-control,
+  .form-select {
+    min-height: 44px;
+    font-size: 1rem;
+  }
 }
 
+/* --- Contact Page: Two-column → Stack --- */
+@media (max-width: 767.98px) {
 
-@media(max-width:768px){
+  .contact-form-section {
+    padding: 1.75rem 1.25rem;
+    border-radius: 12px;
+  }
 
-    .zoho-header{
-        padding:140px 0 80px;
-        text-align:center;
-    }
+  .contact-info-card {
+    text-align: center;
+    padding: 1.5rem;
+  }
 
-    .zoho-header h1{
-        font-size:2.2rem;
-    }
+  .contact-info-card i {
+    margin-left: auto;
+    margin-right: auto;
+  }
 
-    .zoho-header .lead{
-        font-size:1rem;
-    }
-
-    .hero-buttons{
-        justify-content:center;
-    }
-
-    .zoho-header .breadcrumb{
-        justify-content:center;
-    }
+  .map-placeholder {
+    height: 220px;
+    border-radius: 12px;
+  }
 }
+
+/* --- Footer Column Stack --- */
+@media (max-width: 767.98px) {
+
+  .site-footer .col-lg-4,
+  .site-footer .col-lg-2,
+  .site-footer .col-md-6 {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .footer-contact li {
+    justify-content: center;
+  }
+
+  .footer-links a:hover {
+    padding-left: 0;
+  }
+}
+
+/* --- Navbar Toggler Accessibility --- */
+@media (max-width: 991.98px) {
+
+  .navbar-toggler {
+    min-width: 44px;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #E5E7EB;
+    border-radius: 8px;
+    padding: 0.4rem 0.65rem;
+  }
+
+  .navbar-toggler:focus {
+    box-shadow: 0 0 0 3px rgba(0, 120, 212, 0.2);
+    outline: none;
+  }
+}
+
+/* --- Prevent AOS excessive movement on mobile --- */
+@media (max-width: 767.98px) {
+
+  [data-aos] {
+    transition-duration: 0.4s !important;
+  }
+
+  [data-aos="fade-up"],
+  [data-aos="fade-down"],
+  [data-aos="fade-left"],
+  [data-aos="fade-right"] {
+    transform: none !important;
+    opacity: 1 !important;
+    transition: opacity 0.4s ease !important;
+  }
+}
+
+/* --- WhatsApp Float: No overlap with footer --- */
+@media (max-width: 575.98px) {
+
+  .whatsapp-float {
+    bottom: 76px;
+    right: 14px;
+  }
+
+  .back-to-top {
+    bottom: 14px;
+    right: 14px;
+  }
+}
+
+/* --- Image Responsiveness in Hero / Banners --- */
+@media (max-width: 767.98px) {
+
+  .hero-illustration svg,
+  .hero-illustration img {
+    max-width: 90%;
+    margin: 0 auto;
+  }
+}
+
+/* --- Pricing Cards --- */
+@media (max-width: 767.98px) {
+
+  .pricing-card {
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .pricing-card .price {
+    font-size: 1.75rem;
+  }
+}
+
+/* --- Timeline: Adjust for Mobile --- */
+@media (max-width: 575.98px) {
+
+  .timeline {
+    padding-left: 1.5rem;
+  }
+
+  .timeline-item::before {
+    left: -1.5rem;
+  }
+}
+
+/* --- Value Card Icons Center on Mobile --- */
+@media (max-width: 767.98px) {
+
+  .value-card {
+    text-align: center;
+  }
+
+  .value-card .value-icon {
+    margin: 0 auto 1rem;
+  }
+}
+
+/* --- Service Detail Cards --- */
+@media (max-width: 767.98px) {
+
+  .service-detail-card .icon-wrap {
+    margin: 0 auto 1rem;
+  }
+
+  .service-detail-card {
+    text-align: center;
+  }
+
+  .benefit-list li {
+    text-align: left;
+  }
+}
+
+/* --- Stats Section Compact on Mobile --- */
+@media (max-width: 575.98px) {
+
+  .stats-section .row > [class*="col"] {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .stats-section .row > [class*="col"]:last-child {
+    border-bottom: none;
+  }
+}
+
+/* --- Trust Bar Wrap on Small Screens --- */
+@media (max-width: 767.98px) {
+
+  .trust-bar .row {
+    row-gap: 0.5rem;
+  }
+
+  .trust-item {
+    flex-direction: column;
+    gap: 0.4rem;
+    text-align: center;
+  }
+}
+
+/* --- Dropdown Backdrop on Mobile --- */
+@media (max-width: 991.98px) {
+
+  .dropdown-menu.show {
+    position: static !important;
+    transform: none !important;
+    width: 100%;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    background: #F8FAFC;
+    padding: 0.5rem 0;
+  }
+}
+
+/* --- Newsletter Responsive --- */
+@media (max-width: 575.98px) {
+
+  .newsletter-form {
+    flex-direction: column;
+  }
+
+  .newsletter-form input {
+    width: 100%;
+    border-radius: 8px;
+  }
+
+  .newsletter-form button {
+    width: 100%;
+    border-radius: 8px;
+    padding: 0.75rem;
+  }
+}
+
+/* --- Page Actions Center on Mobile --- */
+@media (max-width: 767.98px) {
+
+  .page-actions {
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+/* ============================================================
+   END OF responsive.css
+   GRACA BUILDSYS LLP — Enterprise Grade
+   ============================================================ */
